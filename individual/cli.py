@@ -16,8 +16,6 @@ def get_crimes(district):
     with open('data/Crime_Data_from_2020_part.csv') as f:
         reader = csv.reader(f)
         for crime_row in reader:
-            #print(f'here is area name: {crime_row[area_name]}, here is the crime: {crime_row[crime_type]}')
-            print(district)
             if crime_row[area_name] == district:
                 crimes.append(crime_row[crime_type])
     return crimes
