@@ -23,6 +23,10 @@ def get_crimes(district):
                 crimes.append(crime_row[crime_type])
     return json.dumps(crimes)
 
+@app.route('/')
+def hello():
+    return 'Hello, Welcome to Crime Data.'
+
 @app.route('/help')
 def get_help():
     return flask.render_template('help.html')
