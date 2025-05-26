@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crime Data API reference</title>
+</head>
+<body>
+<pre>Crime Data API - Help
+
+Welcome to the Crime Data API! Below are the available endpoints and their usage:
+
+1. GET /
+    - Description: Returns a simple welcome message.
+   
+1. GET /help
+    - Description: This page
+
+2. GET /areas
+    - Description: Retrieves a list of all available crime areas.
+
+3. GET /types
+    - Description: Retrieves a list of all crime types.
+
+4. GET /months
+    - Description: Retrieves a list of all recorded crime months.
+
+5. GET /rawcsv
+    - Description: Downloads the entire crime dataset in CSV format.
+
+6. GET /crimes
+    - Description: Retrieves crime data filtered by month, area, and/or crime type.
+    - Query Parameters:
+        - start_month: Filter crimes that occurred on or after this month (yyyy-mm).
+        - end_month: Filter crimes that occurred on or before this month (yyyy-mm).
+        - area: Filter crimes from a specific location.
+        - type: Filter crimes by the crime type.
+    - Example: curl "http://localhost:8888/crimes?start_month=2025-01&area=West%20LA&type=CRIMINAL%20THREATS%20-%20NO%20WEAPON%20DISPLAYED"
+    </pre>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LA Crime Data Explorer</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="static/webapp.js" defer></script>
+</head>
+<body>
+
+    <h1>LA Crime Data Explorer</h1>
+
+    <!-- === CRIME FILTER + GRAPH === -->
+    <div class="container">
+        <div class="sidebar">
+            <h2>Filters</h2>
+            <p> Type:</p>
+            <select id="types_selector" class="selector"></select>
+            <p> Area:</p>
+            <select id="areas_selector" class="selector"></select>
+            <p> Start Date:</p>
+            <select id="start_dates_selector" class="selector"></select>
+            <p> End Date:</p>
+            <select id="end_dates_selector" class="selector"></select>
+            <button id="search_button" class="filter-button">Search</button>
+            <p> Table (later will be turned into graphs): </p>
+            <table id="crimes_table" class="table"></table>
+        </div>
+        <div class="main">
+            <canvas id="crimeChart" width="600" height="400"></canvas>
+        </div>
+    </div>
+
+    <!-- === VICTIM DEMOGRAPHICS SECTION === -->
+    <h1>Victim Demographics</h1>
+
+    <div class="demographics-container">
+        <div id="age" class="demographics-graph"> 
+            victim ages
+            <canvas id="ageChart" width="400" height="300"></canvas>
+        </div>
+        <div id="sex" class="demographics-graph"> 
+            victim sex
+            <canvas id="sexChart" width="400" height="300"></canvas>
+        </div>
+    </div>
+
+</body>
+</html>
